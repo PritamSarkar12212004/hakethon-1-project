@@ -8,11 +8,17 @@ import {
 import React, { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import AntDesign from "@expo/vector-icons/AntDesign";
-import Feather from "@expo/vector-icons/Feather";
 
 const index = () => {
   const [numberError, setNumberError] = useState(true);
-  const [PassError, setPassError] = useState(true);
+  const [number, setnumber] = useState(null);
+  const verification = () => {
+    if (number.length === 10) {
+      setNumberError(false);
+    } else {
+      setNumberError(true);
+    }
+  };
 
   return (
     <SafeAreaView className="w-full h-full bg-white">
@@ -45,32 +51,14 @@ const index = () => {
               } `}
             />
           </View>
-          <View className="w-full  relative">
-            <View className="absolute top-9 left-3">
-              <Feather
-                name="unlock"
-                size={24}
-                color={PassError ? "#7c73e6" : "red"}
-              />
-            </View>
-            <TextInput
-              // value={pass ? pass : ""}
-              // onChangeText={(pass) => passInput(pass)}
-              placeholder={"Password"}
-              className={`w-full border-[1px] rounded-2xl p-3 mt-5 h-14 text-xl pl-12 pr-12 ${
-                PassError ? "border-[#7d73e6cc]" : "border-red-500"
-              } `}
-            />
-          </View>
+
           <View className="w-full mt-14 flex items-center justify-center"></View>
         </View>
         <TouchableOpacity
           className={`w-full h-16 bg-[#7c73e6]  flex items-center justify-center rounded-[25px] tracking-widest leading-loose`}
           activeOpacity={0.8}
         >
-          <Text className="text-xl text-white font-semibold">
-            Login your Account
-          </Text>
+          <Text className="text-xl text-white font-semibold">Sign In</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>

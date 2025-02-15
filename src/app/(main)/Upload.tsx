@@ -3,8 +3,10 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Entypo from "@expo/vector-icons/Entypo";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { useRouter } from "expo-router";
 
 const Upload = () => {
+  const router = useRouter();
   return (
     <SafeAreaView className="bg-[#CEEACA] relative">
       <View className="w-full h-full relative bg-[#CEEACA] flex items-center pt-40  ">
@@ -62,7 +64,11 @@ const Upload = () => {
           to get the best deals.
         </Text>
         <View className="flex w-full px-10 items-center mt-5 justify-center">
-          <TouchableOpacity className="w-full py-5 flex items-center justify-center rounded-3xl bg-[#7C73E6]">
+          <TouchableOpacity
+            activeOpacity={0.8}
+            onPress={() => router.push("/(upload")}
+            className="w-full py-5 flex items-center justify-center rounded-3xl bg-[#7C73E6]"
+          >
             <Text className="text-2xl font-bold text-white">Upload</Text>
           </TouchableOpacity>
         </View>

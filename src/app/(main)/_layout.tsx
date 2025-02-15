@@ -5,6 +5,7 @@ import Entypo from "@expo/vector-icons/Entypo";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Feather from "@expo/vector-icons/Feather";
+
 const _layout = () => {
   return <_layout1 />;
 };
@@ -24,7 +25,7 @@ const _layout1 = () => {
             paddingHorizontal: 20,
 
             height: 60,
-            backgroundColor: "#2C3930",
+            backgroundColor: "#1D1616",
             borderWidth: 0,
             elevation: 0,
             shadowColor: "transparent",
