@@ -1,50 +1,72 @@
-# Welcome to your Expo app 👋
+# Welcome to Your Expo App 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is an **Expo** project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app). It is built using **React Native**, **Expo Router**, and **NativeWind (Tailwind CSS for React Native)**.
 
-## Get started
+## Getting Started
 
-1. Install dependencies
+### 1. Install Dependencies
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
-2. Start the app
+### 2. Start the App
 
-   ```bash
-    npx expo start
-   ```
+```bash
+npx expo start
+```
 
-In the output, you'll find options to open the app in a
+You will see options to open the app in:
+- [Android Emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS Simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go)
+- A **development build** for testing on a real device
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Features
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- **Navigation:** Implemented using `expo-router`
+- **Styling:** Uses **NativeWind** (Tailwind CSS for React Native)
+- **Authentication:** Supports Google & GitHub login
+- **Database:** Integrated with **MongoDB, Express.js, and Mongoose**
+- **Horizontal Scrolling FlatList** with TouchableOpacity items
+- **Drawer & Tab Navigation:** Designed similar to Telegram
+- **Room & Tiffin Booking Service:** For students and local users
 
-## Get a fresh project
+## Project Structure
 
-When you're ready, run:
+```
+/root
+ |-- app/
+ |   |-- (tabs)/  # Tab navigation screens
+ |   |-- (drawer)/  # Drawer navigation screens
+ |   |-- index.js  # Main entry point
+ |-- components/  # Reusable UI components
+ |-- assets/  # Images, icons, fonts
+ |-- utils/  # Utility functions & config
+ |-- package.json
+```
 
+## Reset the Project
+
+To start fresh:
 ```bash
 npm run reset-project
 ```
+This will move the starter code to `app-example/` and create a blank `app/` directory.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Learn More
 
-## Learn more
+Explore more about Expo development:
+- [Expo Documentation](https://docs.expo.dev/)
+- [Learn Expo Tutorial](https://docs.expo.dev/tutorial/introduction/)
+- [GitHub Repository](https://github.com/expo/expo)
+- [Expo Community on Discord](https://chat.expo.dev)
 
-To learn more about developing your project with Expo, look at the following resources:
+## Contact
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+**Developer:** Pritam Sarkar  
+**Email:** [pritam7796419792@gmail.com](mailto:pritam7796419792@gmail.com)  
+**GitHub:** [PritamSarkar12212004](https://github.com/PritamSarkar12212004)  
 
-## Join the community
+Happy Coding! 🚀
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
