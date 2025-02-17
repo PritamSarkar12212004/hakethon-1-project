@@ -7,6 +7,7 @@ import Sussegtion from "@/src/components/Sussegtion";
 import PopularArea from "@/src/components/PopularArea";
 
 const Search = () => {
+  
   return (
     <SafeAreaView className="w-full h-full bg-[#F8F2EF]">
       <View className="w-full h-full">

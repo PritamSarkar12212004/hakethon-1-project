@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity } from "react-native";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import ProfileHeader from "@/src/components/ProfileHeader";
 import AntDesign from "@expo/vector-icons/AntDesign";
@@ -11,13 +11,24 @@ import LottieView from "lottie-react-native";
 
 import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
 import Animation from "@/src/constant/Animation";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useRouter } from "expo-router";
+import { userContext } from "@/src/context/ContextApi";
 const Profile = () => {
+  const { user } = userContext();
+
+  const router = useRouter();
   const animation = useRef<LottieView>(null);
+  const logout = async () => {
+    AsyncStorage.removeItem("auth");
+    AsyncStorage.removeItem("user");
+    router.replace("/(auth)");
+  };
 
   return (
     <SafeAreaView className="w-full h-full bg-[#212121]">
       <View className="w-full h-full bg-white">
-        <ProfileHeader />
+        <ProfileHeader data={user} />
         <View className="w-full relative top-[-70]   flex px-10 items-center justify-center">
           <View className="w-full bg-zinc-100 rounded-xl px-4 flex gap-10 py-3">
             <TouchableOpacity className="w-full flex-row justify-between items-center">
@@ -56,7 +67,11 @@ const Profile = () => {
                 <Feather name="arrow-right" size={24} color="black" />
               </View>
             </TouchableOpacity>
-            <TouchableOpacity className="w-full flex-row justify-between items-center">
+            <TouchableOpacity
+              activeOpacity={0.8}
+              onPress={() => logout()}
+              className="w-full flex-row justify-between items-center"
+            >
               <View className="flex-row items-center gap-3">
                 <MaterialIcons name="logout" size={24} color="red" />
                 <Text className="text-red-500">Log Out</Text>

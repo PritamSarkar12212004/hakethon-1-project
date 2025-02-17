@@ -17,7 +17,7 @@ const Header = () => {
         </Text>
         <Text className="text-white   font-extrabold text-4xl"></Text>
       </View>
-      <View className="w-full relative flex items-center justify-center">
+      <View className="w-full relative z-50 flex items-center justify-center">
         <Image
           source={ImageCon.logo}
           className="w-full h-56 mt-36 absolute top-[-170] rounded-[40px] border-[10px] border-[#212121]  "
